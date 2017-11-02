@@ -1,0 +1,5 @@
+If not(isnull(iMailshotProgressInst))
+	Do iMailshotProgressInst.$close()
+	Calculate iMailshotProgressInst as #NULL
+End If
+Do iCallingInst.$completed(pRow)

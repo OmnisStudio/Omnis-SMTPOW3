@@ -1,0 +1,41 @@
+{
+	"classtype": "kObjectclass",
+	"internalversion": 3,
+	"superclass": ".OW3.OW3 Worker Objects\\SMTPClientWorker",
+	"designtaskname": "Startup_Task",
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "iCallingInst",
+			"order": 1,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iMailshotProgressInst",
+			"order": 2,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		}
+	],
+	"properties": {
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2017-09-07 11:57:33",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"issupercomponent": false,
+		"moddate": "2017-07-21 12:49:15",
+		"selfcontained": false,
+		"showascheckedout": false,
+		"userinfo": "",
+		"version": "1"
+	}
+}
