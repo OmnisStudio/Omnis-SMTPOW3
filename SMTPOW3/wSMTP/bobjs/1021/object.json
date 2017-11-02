@@ -1,0 +1,27 @@
+{
+	"ident": 1021,
+	"order": 16387,
+	"objtype": "kLabel",
+	"properties": {
+		"align": "kRightJst",
+		"backcolor": "kColorBackFill",
+		"backpattern": 15,
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"fieldstyle": "CtrlLabel",
+		"font": 5,
+		"fontsize": 0,
+		"fontstyle": "kPlain",
+		"forecolor": "kColorForeFill",
+		"height": 19,
+		"left": 65,
+		"objlink": 65537,
+		"text": "Password",
+		"textcolor": "kColorWindowText",
+		"top": 85,
+		"userinfo": "",
+		"vertcentertext": true,
+		"visible": true,
+		"width": 120
+	}
+}

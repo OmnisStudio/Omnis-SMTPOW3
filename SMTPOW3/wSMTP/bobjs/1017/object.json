@@ -1,0 +1,30 @@
+{
+	"ident": 1017,
+	"order": 16385,
+	"objtype": "kText",
+	"properties": {
+		"align": "kRightJst",
+		"backcolor": "kColorBackFill",
+		"backpattern": 15,
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"fieldstyle": "CtrlLabel",
+		"font": 5,
+		"fontsize": 0,
+		"fontstyle": "kPlain",
+		"forecolor": "kColorForeFill",
+		"height": 19,
+		"left": 5,
+		"objlink": 65537,
+		"text": {
+			"type": 14,
+			"calc": "Server"
+		},
+		"textcolor": "kColorWindowText",
+		"top": 10,
+		"userinfo": "",
+		"vertcentertext": true,
+		"visible": true,
+		"width": 180
+	}
+}
