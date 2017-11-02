@@ -1,0 +1,2 @@
+Open window instance wSMTPAbout/CEN
+Do $clib.$windows.wSMTP.$openonce('*',kWindowCenter)
