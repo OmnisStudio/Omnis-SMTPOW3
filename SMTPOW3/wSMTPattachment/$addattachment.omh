@@ -1,0 +1,23 @@
+If len(iPath)=0
+	;  This attachment is not required
+	Quit method kTrue
+End If
+Calculate lPos as pos('/',iMIMEtype)
+If not(lPos)
+	OK message  {Invalid MIME type: [iMIMEtype]}
+	Quit method kFalse
+End If
+Calculate lType as left(iMIMEtype,lPos-1)
+Calculate lSubType as mid(iMIMEtype,lPos+1)
+Calculate lDisposition as iDispositionList.C1
+If iEncodingList.$line>1
+	Calculate lEncoding as iEncodingList.iEncoding
+End If
+Switch iAttachAsList.iAttachAsId
+	Case cAttachAsCharacter
+		Quit method $cinst.$addattachmentascharacter(pMimeList,pLevel,lType,lSubType,lEncoding,lDisposition)
+	Case cAttachAsBinary
+		Quit method $cinst.$addattachmentasbinary(pMimeList,pLevel,lType,lSubType,lEncoding,lDisposition)
+End Switch
+OK message  {Invalid attach type ([iAttachAsList.iAttachAsId]) - should never get to here}
+Quit method kFalse

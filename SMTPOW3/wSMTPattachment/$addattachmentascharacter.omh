@@ -1,0 +1,5 @@
+;  Depending on the presence of fields, pass only as many parameters as are necessary
+ReadBinFile (iPath,lBinary)
+Do utf8tochar(lBinary) Returns lChar     ;; For testing, convert from UTF-8
+Do pMimeList.$add(pLevel,pMimeType,pMimeSubType,iFilename,lChar,,iCharsetList.iCharsetId,pEncoding,pDisposition)
+Quit method kTrue

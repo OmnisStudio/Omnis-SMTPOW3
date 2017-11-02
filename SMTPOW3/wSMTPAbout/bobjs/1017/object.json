@@ -1,0 +1,30 @@
+{
+	"ident": 1017,
+	"order": 16385,
+	"objtype": "kText",
+	"properties": {
+		"align": "kLeftJst",
+		"backcolor": "kColorBackFill",
+		"backpattern": 15,
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"fieldstyle": "CtrlLabel",
+		"font": 5,
+		"fontsize": 0,
+		"fontstyle": "kPlain",
+		"forecolor": "kColorForeFill",
+		"height": 400,
+		"left": 0,
+		"objlink": 2,
+		"text": {
+			"type": 14,
+			"calc": "\u001B\u000200000001#SMTP OW3 Worker\u001B\u000200000000#\r\rThe SMTP OW3 Worker Object allows an application to send emails on a background thread asynchronously, thereby giving the user full use of the system whilst emails are being sent. \r\rIn this example press the Start button to send emails on the background thread or use Run to use the current thread.\r\rTo send bulk emails, use the Mailshot option together with a comma separated list of recipients. Progress may be displayed when sending multiple emails by checking Call progress or Call mailshot progress.\r\rPlease note, to send emails via Gmail users may need to set 'Allow less secure apps' on their Google account settings."
+		},
+		"textcolor": "kColorWindowText",
+		"top": 0,
+		"userinfo": "",
+		"vertcentertext": false,
+		"visible": true,
+		"width": 460
+	}
+}

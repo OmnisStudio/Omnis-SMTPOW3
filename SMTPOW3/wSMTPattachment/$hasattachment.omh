@@ -1,0 +1,5 @@
+If len(iPath)=0
+	;  This attachment is not required
+	Quit method kFalse
+End If
+Quit method kTrue

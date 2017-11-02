@@ -1,0 +1,4 @@
+;  Depending on the presence of fields, pass only as many parameters as are necessary
+ReadBinFile (iPath,lBinary)
+Do pMimeList.$add(pLevel,pMimeType,pMimeSubType,iFilename,,lBinary,iCharsetList.iCharsetId,pEncoding,pDisposition)
+Quit method kTrue
