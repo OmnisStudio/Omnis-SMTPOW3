@@ -1,0 +1,17 @@
+Calculate iResponse as pResults
+Calculate $cinst.$objs.scrollbox.$objs.cancel.$enabled as kFalse
+Calculate $cinst.$objs.scrollbox.$objs.start.$enabled as kTrue
+Calculate $cinst.$objs.scrollbox.$objs.startthencancel.$enabled as kTrue
+
+Calculate iErrorCode as pResults.errorCode
+Calculate iErrorText as pResults.errorInfo
+If iUsingLogBrowser
+	Do FileOps.$deletefile(iLogHTMLPath)
+	WriteBinFile (iLogHTMLPath,iResponse.log)
+	Calculate iLogBrowser.$urlorcontrolname as con("file://",replaceall(iLogHTMLPath," ","%20"))
+Else
+	Calculate iLog as iResponse.log
+End If
+Calculate iFailedRecipients as iResponse.failedRecipients
+Do $cinst.$redraw()
+Calculate $cinst.$objs.tabpane.$currenttab as 4

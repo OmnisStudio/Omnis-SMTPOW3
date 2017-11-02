@@ -1,0 +1,4 @@
+If not($cinst.$objs.tabpane.$objs.[pObject].$addattachment(pMimeList,pLevel))
+	Quit method 1
+End If
+Quit method 0

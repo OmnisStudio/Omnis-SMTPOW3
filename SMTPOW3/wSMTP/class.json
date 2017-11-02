@@ -1,0 +1,377 @@
+{
+	"classtype": "kWindow",
+	"internalversion": 3,
+	"designtaskname": "Startup_Task",
+	"nextident": 1110,
+	"lastgroupident": 0,
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "iBcc",
+			"order": 20,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iCallMailshotProgress",
+			"order": 7,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kFalse"
+		},
+		{
+			"name": "iCallProgress",
+			"order": 43,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kFalse"
+		},
+		{
+			"name": "iCc",
+			"order": 19,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iErrorCode",
+			"order": 35,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "iErrorText",
+			"order": 36,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iExtraHeaderList",
+			"order": 24,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iExtraHeaderName",
+			"order": 25,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iExtraHeaderValue",
+			"order": 26,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iFailedRecipients",
+			"order": 8,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iFrom",
+			"order": 16,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "\"from.address@host.net (From Address)\""
+		},
+		{
+			"name": "iKeepConnectionOpen",
+			"order": 9,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kFalse"
+		},
+		{
+			"name": "iLog",
+			"order": 37,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iLogBrowser",
+			"order": 45,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0,
+			"initval": "#NULL"
+		},
+		{
+			"name": "iLogEdit",
+			"order": 46,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iLogHTMLPath",
+			"order": 47,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iLogType",
+			"order": 41,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "iLogTypeChar",
+			"order": 40,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iLogTypeList",
+			"order": 38,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iMailshot",
+			"order": 6,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "iMessageText",
+			"order": 27,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "\"Test message content\""
+		},
+		{
+			"name": "iMPAlternative",
+			"order": 29,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kFalse"
+		},
+		{
+			"name": "iMultiPartType",
+			"order": 30,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "\"mixed\""
+		},
+		{
+			"name": "iNoMIME",
+			"order": 5,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "iPassword",
+			"order": 2,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iPriorityList",
+			"order": 21,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iPriorityName",
+			"order": 22,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iPriorityValue",
+			"order": 23,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "iRequireSecureConnection",
+			"order": 44,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "iResponse",
+			"order": 3,
+			"type": "kRow",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iServerList",
+			"order": 34,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iServerURI",
+			"order": 4,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iSmtp",
+			"order": 28,
+			"type": "kObjectref",
+			"subtype": "oSMTPWorker",
+			"sublen": 0,
+			"initval": "#NULL"
+		},
+		{
+			"name": "iSubject",
+			"order": 17,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "\"Test message subject\""
+		},
+		{
+			"name": "iTimeout",
+			"order": 33,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "30"
+		},
+		{
+			"name": "iTo",
+			"order": 18,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "\"to.address@host.net (To Address)\""
+		},
+		{
+			"name": "iUser",
+			"order": 1,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000,
+			"initval": "''"
+		},
+		{
+			"name": "iUsesHTML",
+			"order": 42,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "iUsingLogBrowser",
+			"order": 49,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kFalse"
+		}
+	],
+	"properties": {
+		"aligntogrid": false,
+		"alpha": 255,
+		"backcolor": "kColor3DFace",
+		"backgroundskin": 0,
+		"backgroundskinalign": "kPALtopLeft",
+		"backgroundtheme": "kBGThemeWindow",
+		"backpattern": 0,
+		"bringinfront": false,
+		"clickbehind": true,
+		"closebox": true,
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"contextmenu": "",
+		"createdate": "2017-09-07 11:57:35",
+		"desc": "",
+		"dockingedge": "kBorderChisel",
+		"dropmode": "kAcceptNone",
+		"edgefloat": "kEFrightBottom",
+		"editor": "",
+		"editordata": "",
+		"effect": "kBorderNone",
+		"enablemenuandtoolbars": true,
+		"external": true,
+		"forecolor": "kColor3DFace",
+		"growbox": true,
+		"hasmenus": true,
+		"hasstatusbar": false,
+		"height": 420,
+		"helpbutton": false,
+		"helpfile": 0,
+		"horzgrid": 8,
+		"horzscroll": false,
+		"inheritedorder": 1,
+		"issubwindow": false,
+		"issupercomponent": false,
+		"keepclicks": true,
+		"left": 423,
+		"menuedge": "kBorderChisel",
+		"menunames": "mSMTPWorker",
+		"minimizebox": true,
+		"minimizeiconid": 2006,
+		"moddate": "2017-09-07 11:30:25",
+		"modelessdata": true,
+		"showascheckedout": false,
+		"showcommands": false,
+		"showgrid": false,
+		"showtitle": false,
+		"sizetogrid": false,
+		"startfield": 0,
+		"statusbarpos": "kSBPosBottom",
+		"statusedge": "kBorderChisel",
+		"style": "kTitle",
+		"title": {
+			"type": 0,
+			"calc": "SMTP OW3 Worker"
+		},
+		"toolbarnames": "",
+		"toolbaroptions": "kTBOptionNone",
+		"toolbarpos": "kDockingAreaNone",
+		"top": 295,
+		"userinfo": "",
+		"usesheets": false,
+		"version": "1",
+		"vertgrid": 8,
+		"vertscroll": false,
+		"width": 780,
+		"zoombox": true
+	},
+	"statusbar": {
+		"properties": {
+			"fieldstyle": "",
+			"font": 1,
+			"fontsize": 0,
+			"helppane": 0
+		}
+	}
+}

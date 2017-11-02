@@ -1,0 +1,15 @@
+Do pList.$define(lAddress,lDescription)
+Calculate lRecipients as pRecipients
+Repeat
+	Calculate lRecipient as strtok('lRecipients',',')
+	If lRecipient=""
+		Break to end of loop
+	End If
+	Do method $splitaddressentry (lRecipient,lAddress,lDescription) Returns lOk
+	If not(lOk)
+		OK message  {Bad recipient: [lRecipient]}
+		Quit method kFalse
+	End If
+	Do pList.$add(lAddress,lDescription)
+Until flag true
+Quit method kTrue

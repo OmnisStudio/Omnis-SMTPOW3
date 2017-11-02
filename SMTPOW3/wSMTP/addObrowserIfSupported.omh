@@ -1,0 +1,8 @@
+Set reference iLogEdit to $cinst.$objs.tabpane.$objs.log
+If sys(6)='U'
+	Quit method
+End If
+Do $cinst.$objs.tabpane.$objs.$add(4,kComponent,"OBrowser Library","OBrowser Control",iLogEdit.$top,iLogEdit.$left,iLogEdit.$height,iLogEdit.$width,kTrue) Returns iLogBrowser
+Calculate iLogBrowser.$edgefloat as kEFrightBottom
+Calculate iLogBrowser.$effect as kBorderCtrlEdit
+Calculate iLogHTMLPath as con(left(sys(10),rpos(pathsep(),sys(10))),"OW3htmllog_smtp.htm")

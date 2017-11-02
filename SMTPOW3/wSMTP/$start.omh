@@ -1,0 +1,97 @@
+Do iFailedRecipients.$define()
+Do $cinst.$objs.tabpane.$objs.failedrecipients.$redraw()
+;  Prepare extra headers
+If iExtraHeaderList.$linecount
+	;  Remove empty lines
+	For lLineNumber from iExtraHeaderList.$linecount to 1 step -1
+		Calculate iExtraHeaderList.$line as lLineNumber
+		If len(trim(iExtraHeaderList.iExtraHeaderName))=0&len(trim(iExtraHeaderList.iExtraHeaderValue))=0
+			Do iExtraHeaderList.$remove(lLineNumber)
+		End If
+	End For
+	Do $cinst.$objs.tabpane.$objs.extraheaders.$redraw()
+End If
+;  Now build the content
+If iNoMIME
+	Calculate lBinContent as chartoutf8(iMessageText)
+Else
+	Do lMIMElist.$define(lLevel,lContentType,lContentSubtype,lFilename,lCharData,lBinData,lCharset,lEncoding,lDisposition)
+	Do lMIMElist.$add(0,"multipart","mixed")
+	Calculate lLevel as 1
+	If not(iMPAlternative)
+		Do lMIMElist.$add(lLevel,"text","plain","",iMessageText)
+	Else
+		Do lMIMElist.$add(lLevel,"multipart","alternative",,,,,,"inline")
+		Do lMIMElist.$add(lLevel+1,"text","plain","",iMessageText)
+		Do lMIMElist.$add(lLevel+1,"text","html","",con("HTML:",kCr,iMessageText))
+	End If
+	;  Get the attachments if any are required
+	Calculate lErrorCount as lErrorCount+$cinst.$addattachment(lMIMElist,lLevel,"att1")
+	Calculate lErrorCount as lErrorCount+$cinst.$addattachment(lMIMElist,lLevel,"att2")
+	If lErrorCount>0
+		;  Failed to add an attachment
+		Quit method kFalse
+	End If
+End If
+;  Prepare the worker
+Do method setupLogging
+Calculate iSmtp.$timeout as iTimeout
+Calculate iSmtp.$callprogress as iCallProgress
+Calculate iSmtp.$keepconnectionopen as iKeepConnectionOpen
+Calculate iSmtp.$requiresecureconnection as iRequireSecureConnection
+Calculate iSmtp.$callmailshotprogress as iCallMailshotProgress
+Do method $splitaddressentry (iFrom,lFromAddress,lFromDescription) Returns lOk
+If not(lOk)
+	OK message  {From "[iFrom]" is invalid}
+	Quit method kFalse
+End If
+Calculate lOk as $cinst.$makerecipientlist(lToList,iTo)
+If not(lOk)
+	OK message  {From "[iTo]" is invalid}
+	Quit method kFalse
+End If
+Calculate lOk as $cinst.$makerecipientlist(lCcList,iCc)
+If not(lOk)
+	OK message  {From "[iCc]" is invalid}
+	Quit method kFalse
+End If
+Calculate lOk as $cinst.$makerecipientlist(lBccList,iBcc)
+If not(lOk)
+	OK message  {From "[iBcc]" is invalid}
+	Quit method kFalse
+End If
+If iCallMailshotProgress
+	Set reference lMailshotProgressItem to $clib.$windows.wMailshotProgress.$openmodal("*",kWindowCenterRelative,$cinst,lToList.$linecount,$cinst)
+End If
+Do iSmtp.$setMailshotProgressInst(lMailshotProgressItem)
+If iNoMIME
+	If len(lFromDescription)
+		Do iSmtp.$init(iServerURI,iUser,iPassword,row(lFromAddress,lFromDescription),lToList,lCcList,lBccList,iSubject,iPriorityList.iPriorityValue,iExtraHeaderList,lBinContent,iMailshot) Returns lOk
+	Else
+		Do iSmtp.$init(iServerURI,iUser,iPassword,lFromAddress,lToList,lCcList,lBccList,iSubject,iPriorityList.iPriorityValue,iExtraHeaderList,lBinContent,iMailshot) Returns lOk
+	End If
+Else
+	If len(lFromDescription)
+		Do iSmtp.$init(iServerURI,iUser,iPassword,row(lFromAddress,lFromDescription),lToList,lCcList,lBccList,iSubject,iPriorityList.iPriorityValue,iExtraHeaderList,lMIMElist,iMailshot) Returns lOk
+	Else
+		Do iSmtp.$init(iServerURI,iUser,iPassword,lFromAddress,lToList,lCcList,lBccList,iSubject,iPriorityList.iPriorityValue,iExtraHeaderList,lMIMElist,iMailshot) Returns lOk
+	End If
+End If
+If not(lOk)
+	OK message  {$init error [iSmtp.$errorcode]: [iSmtp.$errortext]}
+	Quit method kFalse
+End If
+If pRun
+	Do iSmtp.$run() Returns lOk
+Else
+	Do iSmtp.$start() Returns lOk
+End If
+If not(lOk)
+	OK message  {$run error [iSmtp.$errorcode]: [iSmtp.$errortext]}
+	Quit method kFalse
+Else If not(pRun)
+	Calculate $cinst.$objs.scrollbox.$objs.cancel.$enabled as kTrue
+	Calculate $cinst.$objs.scrollbox.$objs.start.$enabled as kFalse
+	Calculate $cinst.$objs.scrollbox.$objs.startthencancel.$enabled as kFalse
+End If
+Quit method kTrue

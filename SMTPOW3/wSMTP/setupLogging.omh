@@ -1,0 +1,13 @@
+Calculate iSmtp.$protocollog as iLogTypeList.C2
+If iLogTypeList.C3&not(isnull(iLogBrowser))
+	Calculate iUsingLogBrowser as kTrue
+	Calculate iLogEdit.$visible as kFalse
+	Calculate iLogBrowser.$urlorcontrolname as ""
+	Calculate iLogBrowser.$visible as kTrue
+Else
+	Calculate iUsingLogBrowser as kFalse
+	If not(isnull(iLogBrowser))
+		Calculate iLogBrowser.$visible as kFalse
+	End If
+	Calculate iLogEdit.$visible as kTrue
+End If

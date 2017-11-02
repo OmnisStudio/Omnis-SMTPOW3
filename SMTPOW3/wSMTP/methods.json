@@ -1,0 +1,425 @@
+[
+	{
+		"name": "$construct",
+		"ident": 1,
+		"order": 1,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"ident": 2,
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$completed",
+		"ident": 0,
+		"order": 3,
+		"pvardefs": [
+			{
+				"name": "pResults",
+				"order": 1,
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lAuthCode",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"initval": "\"\""
+			}
+		]
+	},
+	{
+		"name": "$cancelled",
+		"ident": 3,
+		"order": 4,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$start",
+		"ident": 4,
+		"order": 5,
+		"pvardefs": [
+			{
+				"name": "pRun",
+				"order": 10,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1,
+				"initval": "kFalse"
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lBccList",
+				"order": 26,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lBinContent",
+				"order": 27,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 0
+			},
+			{
+				"name": "lBinData",
+				"order": 18,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 100000000
+			},
+			{
+				"name": "lCcList",
+				"order": 25,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lCharData",
+				"order": 17,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lCharset",
+				"order": 19,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			},
+			{
+				"name": "lContentSubtype",
+				"order": 15,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lContentType",
+				"order": 14,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lDisposition",
+				"order": 21,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lEncoding",
+				"order": 20,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lErrorCount",
+				"order": 1,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"initval": "0"
+			},
+			{
+				"name": "lFilename",
+				"order": 16,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lFromAddress",
+				"order": 22,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lFromDescription",
+				"order": 23,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lLevel",
+				"order": 13,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			},
+			{
+				"name": "lLineNumber",
+				"order": 2,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			},
+			{
+				"name": "lMailshotProgressItem",
+				"order": 28,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"initval": "#NULL"
+			},
+			{
+				"name": "lMIMElist",
+				"order": 12,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lOk",
+				"order": 9,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0
+			},
+			{
+				"name": "lToList",
+				"order": 24,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$addattachment",
+		"ident": 6,
+		"order": 6,
+		"pvardefs": [
+			{
+				"name": "pMimeList",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pLevel",
+				"order": 2,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 2
+			},
+			{
+				"name": "pObject",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 3
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lBodyPartId",
+				"order": 3,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$hasattachment",
+		"ident": 5,
+		"order": 7,
+		"pvardefs": [
+			{
+				"name": "pObject",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$splitaddressentry",
+		"ident": 8,
+		"order": 8,
+		"pvardefs": [
+			{
+				"name": "pEntry",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 1
+			},
+			{
+				"name": "pAddress",
+				"order": 2,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 2
+			},
+			{
+				"name": "pDescription",
+				"order": 3,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 3
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lClosePos",
+				"order": 5,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			},
+			{
+				"name": "lEndText",
+				"order": 6,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lOpenPos",
+				"order": 4,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$makerecipientlist",
+		"ident": 9,
+		"order": 9,
+		"pvardefs": [
+			{
+				"name": "pList",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pRecipients",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lAddress",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lDescription",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lOk",
+				"order": 7,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0
+			},
+			{
+				"name": "lRecipient",
+				"order": 6,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lRecipients",
+				"order": 5,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			}
+		]
+	},
+	{
+		"name": "addObrowserIfSupported",
+		"ident": 7,
+		"order": 10,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "setupLogging",
+		"ident": 10,
+		"order": 11,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$cancelrequest",
+		"ident": 11,
+		"order": 12,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	}
+]

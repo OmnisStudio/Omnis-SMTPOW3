@@ -1,0 +1,34 @@
+Do $objects.oSMTPWorker.$newref() Returns iSmtp
+Do iSmtp.$setCallingInst($cinst)
+
+Calculate $cinst.$objs.tabpane.$showpane(5,kFalse) as
+
+Do iPriorityList.$define(iPriorityName,iPriorityValue)
+Do iPriorityList.$add("kOW3msgPriorityLowest",kOW3msgPriorityLowest)
+Do iPriorityList.$add("kOW3msgPriorityLow",kOW3msgPriorityLow)
+Do iPriorityList.$add("kOW3msgPriorityNormal",kOW3msgPriorityNormal)
+Do iPriorityList.$add("kOW3msgPriorityHigh",kOW3msgPriorityHigh)
+Do iPriorityList.$add("kOW3msgPriorityHighest",kOW3msgPriorityHighest)
+Calculate iPriorityList.$line as 3
+
+Do iExtraHeaderList.$define(iExtraHeaderName,iExtraHeaderValue)
+
+Do iServerList.$define(iServerURI)
+Do iServerList.$add("smtps://smtp.gmail.com")
+Do iServerList.$add("smtps://smtp.gmail.com:465")
+Do iServerList.$add("smtp://smtp.gmail.com:587")
+Do iServerList.$add("smtp://mailtrap.io")
+Do iServerList.$line.$assign(2)
+Do iServerList.$loadcols()
+
+Do iLogTypeList.$define(iLogTypeChar,iLogType,iUsesHTML)
+Do iLogTypeList.$add("No logging",kOW3logNone,kFalse)
+Do iLogTypeList.$add("Basic logging (HTML)",kOW3logBasic+kOW3logHTML,kTrue)
+Do iLogTypeList.$add("Basic and data logging (HTML)",kOW3logBasic+kOW3logData+kOW3logHTML,kTrue)
+Do iLogTypeList.$add("Full logging (HTML)",kOW3logBasic+kOW3logData+kOW3logSecureData+kOW3logHTML,kTrue)
+Do iLogTypeList.$add("Basic logging",kOW3logBasic,kFalse)
+Do iLogTypeList.$add("Basic and data logging",kOW3logBasic+kOW3logData,kFalse)
+Do iLogTypeList.$add("Full logging",kOW3logBasic+kOW3logData+kOW3logSecureData,kFalse)
+Calculate iLogTypeList.$line as 2
+
+Do method addObrowserIfSupported
