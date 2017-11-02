@@ -1,0 +1,4 @@
+Set reference iCallingInstance to pCallingInstance
+Calculate $cinst.$objs.progress.$::max as pCount
+Calculate $cinst.$objs.progress.$::min as 0
+Calculate $cinst.$objs.progress.$val as 0

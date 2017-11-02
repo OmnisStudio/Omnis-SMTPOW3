@@ -1,0 +1,8 @@
+Calculate $cinst.$objs.progress.$val as $cinst.$objs.progress.$val+1
+If pInfo.sent
+	Calculate $cinst.$bobjs.1017.$text as con("Successful send to ",pInfo.address)
+Else
+	Calculate $cinst.$bobjs.1017.$text as con("Error sending to ",pInfo.address)
+	Calculate iErrorCount as iErrorCount+1
+	Calculate $cinst.$bobjs.1018.$text as con(iErrorCount,pick(iErrorCount=1," errors"," error"))
+End If
