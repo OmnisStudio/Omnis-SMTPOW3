@@ -1,0 +1,8 @@
+On evClick     ;; Event Parameters - pRow( Itemreference )
+	If $cinst.$start()
+		Do iSmtp.$cancel() Returns lOk
+		If not(lOk)
+			OK message  {Error [iSmtp.$errorcode]: [iSmtp.$errortext]}
+			Quit event handler
+		End If
+	End If
